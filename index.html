@@ -13,7 +13,7 @@
     <title>Cafeteria</title>
 </head>
 
-<body>
+<body class="claro">
     <!-- Header con Nav -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -46,6 +46,13 @@
             </div>
         </nav>
     </header>
+
+    <!-- Boton de DarkMode -->
+    <button
+        class="btn rounded-circle position-fixed bottom-0 end-0 btn-light m-3 border-dark border-2 bg-warning text-light"
+        id="btnDark" style="width: 50px; height: 50px; z-index: 1000;" onclick="cambiar()">
+        <i class="fas fa-moon"></i>
+    </button>
 
     <!-- Inicio -->
     <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-light" id="inicio">
@@ -100,7 +107,7 @@
     <div class="container-fluid py-5" id="productos">
         <div class="row mb-5">
             <div class="col col-12">
-                <h1 class="text-center text-brown">Nuestros Productos</h1>
+                <h1 class="text-center text-brown">Descubre nuestros productos</h1>
                 <div class="mx-auto" style="width: 80px; height: 3px; background-color: #8B5A2B;"></div>
             </div>
         </div>
@@ -353,6 +360,42 @@
             </div>
   `;
             container.appendChild(card);
+        });
+
+        const btnDark = document.getElementById("btnDark");
+        const body = document.body;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnDark = document.getElementById("btnDark");
+            const body = document.body;
+
+            function initTheme() {
+                function initTheme() {
+                    body.classList.remove('oscuro');
+                    body.classList.add('claro');
+                    updateIcon('claro');
+                }
+            }
+
+            function updateIcon(theme) {
+                btnDark.innerHTML = theme === 'oscuro'
+                    ? '<i class="fas fa-sun"></i>'
+                    : '<i class="fas fa-moon"></i>';
+            }
+
+            function toggleTheme() {
+                if (body.classList.contains('oscuro')) {
+                    body.classList.replace('oscuro', 'claro');
+                    localStorage.setItem('theme', 'claro');
+                } else {
+                    body.classList.replace('claro', 'oscuro');
+                    localStorage.setItem('theme', 'oscuro');
+                }
+                updateIcon(body.classList.contains('oscuro') ? 'oscuro' : 'claro');
+            }
+
+            btnDark.addEventListener('click', toggleTheme);
+            initTheme();
         });
 
     </script>
