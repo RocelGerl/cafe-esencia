@@ -32,11 +32,6 @@ html {
     --scroll-thumb: #d4a373;
     --form-bg: #2d2d2d;
     --input-bg: #3d3d3d;
-    
-    /* Imagen de fondo más oscura */
-    #inicio {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('cafecito.jpg');
-    }
   }
 
 
@@ -79,13 +74,13 @@ span {
 
 
 .botonInicio {
-    border: 1px solid var(--bg-color);
-    color: var(--bg-color);
+    border: 1px solid white;
+    color: white;
     transition: 0.5s;
 }
 
 .botonInicio:hover {
-    background-color: var(--bg-color);
+    background-color: white;
     color: black;
 }
 
@@ -109,6 +104,10 @@ span {
     min-height: 660px;
 }
 
+#nosotros p{
+    color: var(--text-color) !important;
+}
+
 .elementoNosotros i {
     background-color: var(--primary-color);
     width: 70px;
@@ -117,7 +116,7 @@ span {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--bg-color);
+    color: white;
     transition: 0.8s;
 }
 
@@ -178,7 +177,13 @@ form input,
 form textarea {
     background-color: var(--secondary-color) !important;
     font-weight: bold;
+    color: var(--text-color) !important;
 }
+
+::placeholder {
+    color: var(--text-color) !important; 
+    opacity: 1;
+  }
 
 form .btn {
     background-color: var(--primary-color);
@@ -217,3 +222,6 @@ footer {
     border: 3px solid var(--primary-color) ;
 }
 
+#btnEnviar::placeholder{
+    color: #121212 !important;
+}
