@@ -2,6 +2,10 @@
 
 Sitio web moderno y responsive para una cafetería, diseñado con **Bootstrap 5** y **Font Awesome**. Este proyecto fue creado como práctica para fortalecer habilidades en HTML, CSS, JS y diseño web responsivo.
 
+## 👨‍💻 Demo
+
+Haz la prueba esta pagina, y conoce a detalle su funcionamiento.
+
 ---
 
 ## 📌 Secciones del Sitio
