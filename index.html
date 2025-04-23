@@ -55,7 +55,7 @@
     </button>
 
     <!-- Inicio -->
-    <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-light" id="inicio">
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-light text-center" id="inicio">
         <span>No te quedes con las ganas</span>
         <h1 style="font-size: 50px;" class="text-center">Prueba nuestro delicioso cafe</h1>
         <span>Nadie lo hace mejor</span>
@@ -84,15 +84,15 @@
                         </p>
                     </div>
                     <div class="d-flex justify-content-evenly">
-                        <div class="elementoNosotros d-flex flex-column justify-content-center align-items-center">
+                        <div class="elementoNosotros d-flex flex-column justify-content-center align-items-center text-center">
                             <i class="fa-solid fa-leaf mb-3"></i>
                             <p class="fst-italic">100% Natural</p>
                         </div>
-                        <div class="elementoNosotros d-flex flex-column justify-content-center align-items-center">
+                        <div class="elementoNosotros d-flex flex-column justify-content-center align-items-center text-center">
                             <i class="fas fa-coffee mb-3"></i>
                             <p class="fst-italic">cafe arabe</p>
                         </div>
-                        <div class="elementoNosotros d-flex flex-column justify-content-center align-items-center">
+                        <div class="elementoNosotros d-flex flex-column justify-content-center align-items-center text-center">
                             <i class="fas fa-heart mb-3"></i>
                             <p class="fst-italic">Hecho con amor</p>
                         </div>
@@ -245,7 +245,7 @@
                     <div class="mt-4">
                         <h6 class="text-uppercase fw-bold mb-3">Suscríbete</h6>
                         <div class="input-group mb-3">
-                            <input type="email" class="form-control" placeholder="Tu correo" aria-label="Tu correo">
+                            <input type="email" class="form-control" id="btnEnviar" placeholder="Tu correo" aria-label="Tu correo">
                             <button class="btn btn-warning text-white" type="button">Enviar</button>
                         </div>
                     </div>
@@ -333,56 +333,53 @@
             }
         ];
 
-
+        // Cargar productos
         const container = document.getElementById("productosContainer");
-
         productos.forEach(producto => {
             const card = document.createElement("div");
             card.className = "prod rounded-5";
             card.innerHTML = `
-            <div class="imagenProducto">
-                <img src="${producto.imagen}" alt="producto" class="img-fluid mb-2 rounded-top-5"
-                    style="max-height: 200px; width: 100%; object-fit: cover;">
-            </div>
-            <div class="descripcionProducto px-3">
-                <h5 class="text-center">${producto.nombre}</h5>
-                <span class="fs-6">$ ${producto.precio.toFixed(2)}</span>
-                <div class="scrollProd">
-                    <p>${producto.descripcion}</p>
-                </div>
-                <div class="text-center">
-                    <button type="button"
-                        class="btn mb-3 border-2 border-dark rounded-3 px-3 py-1 position-relative bg-white text-brown botonProd">
-                        <i class="fas fa-shopping-cart"></i>
-                        Comprar
-                    </button>
-                </div>
-            </div>
-  `;
+    <div class="imagenProducto">
+        <img src="${producto.imagen}" alt="producto" class="img-fluid mb-2 rounded-top-5"
+            style="max-height: 200px; width: 100%; object-fit: cover;">
+    </div>
+    <div class="descripcionProducto px-3">
+        <h5 class="text-center">${producto.nombre}</h5>
+        <span class="fs-6">$ ${producto.precio.toFixed(2)}</span>
+        <div class="scrollProd">
+            <p>${producto.descripcion}</p>
+        </div>
+        <div class="text-center">
+            <button type="button"
+                class="btn mb-3 border-2 border-dark rounded-3 px-3 py-1 position-relative bg-white text-brown botonProd">
+                <i class="fas fa-shopping-cart"></i>
+                Comprar
+            </button>
+        </div>
+    </div>`;
             container.appendChild(card);
         });
 
-        const btnDark = document.getElementById("btnDark");
-        const body = document.body;
-
+        // Dark Mode System
         document.addEventListener('DOMContentLoaded', function () {
             const btnDark = document.getElementById("btnDark");
             const body = document.body;
 
+            // Inicializar tema (siempre en claro)
             function initTheme() {
-                function initTheme() {
-                    body.classList.remove('oscuro');
-                    body.classList.add('claro');
-                    updateIcon('claro');
-                }
+                body.classList.remove('oscuro');
+                body.classList.add('claro');
+                updateIcon('claro');
             }
 
+            // Actualizar icono
             function updateIcon(theme) {
                 btnDark.innerHTML = theme === 'oscuro'
                     ? '<i class="fas fa-sun"></i>'
                     : '<i class="fas fa-moon"></i>';
             }
 
+            // Cambiar tema
             function toggleTheme() {
                 if (body.classList.contains('oscuro')) {
                     body.classList.replace('oscuro', 'claro');
@@ -394,10 +391,10 @@
                 updateIcon(body.classList.contains('oscuro') ? 'oscuro' : 'claro');
             }
 
-            btnDark.addEventListener('click', toggleTheme);
+            // Inicializar
             initTheme();
+            btnDark.addEventListener('click', toggleTheme);
         });
-
     </script>
 </body>
 
