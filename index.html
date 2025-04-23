@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cafeteria</title>
+</head>
+
+<body class="claro">
+    <!-- Header con Nav -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <h1 class="text-light">Cafe Esencia</h1>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end pb-1 pb-lg-0" id="navbarNav">
+                    <hr class="text-light">
+                    <ul class="navbar-nav">
+                        <li class="navbar-item pt-1 pb-2 me-3">
+                            <a href="#inicio" class="navbar-link text-decoration-none text-light fw-bold">Inicio</a>
+                        </li>
+                        <li class="navbar-item py-1 pb-2 me-3">
+                            <a href="#nosotros" class="navbar-link text-decoration-none text-light fw-bold">Nosotros</a>
+                        </li>
+                        <li class="navbar-item py-1 pb-2 me-3">
+                            <a href="#productos"
+                                class="navbar-link text-decoration-none text-light fw-bold">Productos</a>
+                        </li>
+                        <li class="navbar-item py-1 pb-2 me-3">
+                            <a href="#contactos"
+                                class="navbar-link text-decoration-none text-light fw-bold">Contactos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Boton de DarkMode -->
+    <button
+        class="btn rounded-circle position-fixed bottom-0 end-0 btn-light m-3 border-dark border-2 bg-warning text-light"
+        id="btnDark" style="width: 50px; height: 50px; z-index: 1000;">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <!-- Inicio -->
+    <div class="container-fluid d-flex flex-column justify-content-center align-items-center text-light text-center" id="inicio">
+        <span>No te quedes con las ganas</span>
+        <h1 style="font-size: 50px;" class="text-center">Prueba nuestro delicioso cafe</h1>
+        <span>Nadie lo hace mejor</span>
+        <a href="#" class="btn botonInicio mt-3 py-2">Nuestra Ubicacion</a>
+    </div>
+
+    <!-- Nosotros -->
+    <div class="container-fluid py-5" id="nosotros">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-12 text-center text-brown mb-5">
+                    <h1>Acerca de Nosotros</h1>
+                    <div class="mx-auto" style="width: 80px; height: 3px; background-color: #8B5A2B;"></div>
+                </div>
+                <div class="col col-10 col-lg-6">
+                    <img src="cafecito.jpg" alt="cafecito" class="img-fluid rounded shadow mb-5 mb-lg-0"
+                        style="max-height: 400px; object-fit: cover;">
+                </div>
+                <div class="col col-10 col-lg-6 d-flex flex-column justify-content-center">
+                    <div class="text-center text-lg-start">
+                        <p class="lead text-muted mb-5">
+                            En <span class="fw-bold text-brown">Café Esencia</span>, creemos que el buen café va más
+                            allá de una simple bebida: es un momento de calma, un ritual que despierta los sentidos.
+                            Desde 2018, servimos granos <span class="fst-italic">100% arábica</span>, tostados
+                            artesanalmente, en un espacio acogedor donde cada cliente se siente como en casa.
+                        </p>
+                    </div>
+                    <div class="d-flex justify-content-evenly">
+                        <div class="elementoNosotros d-flex flex-column justify-content-center align-items-center text-center">
+                            <i class="fa-solid fa-leaf mb-3"></i>
+                            <p class="fst-italic">100% Natural</p>
+                        </div>
+                        <div class="elementoNosotros d-flex flex-column justify-content-center align-items-center text-center">
+                            <i class="fas fa-coffee mb-3"></i>
+                            <p class="fst-italic">cafe arabe</p>
+                        </div>
+                        <div class="elementoNosotros d-flex flex-column justify-content-center align-items-center text-center">
+                            <i class="fas fa-heart mb-3"></i>
+                            <p class="fst-italic">Hecho con amor</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Productos -->
+    <div class="container-fluid py-5" id="productos">
+        <div class="row mb-5">
+            <div class="col col-12">
+                <h1 class="text-center text-brown">Descubre nuestros productos</h1>
+                <div class="mx-auto" style="width: 80px; height: 3px; background-color: #8B5A2B;"></div>
+            </div>
+        </div>
+        <div class="justify-content-center d-flex flex-wrap gap-5" id="productosContainer"></div>
+    </div>
+    <!-- Contactos -->
+    <div class="container-fluid py-5" id="contactos">
+        <div class="row">
+            <div class="col col-12 text-center text-brown mb-5">
+                <h1>Contactos</h1>
+                <div class="mx-auto" style="width: 80px; height: 3px; background-color: #8B5A2B;"></div>
+            </div>
+        </div>
+        <div class="container py-5">
+            <div class="row ">
+                <div
+                    class="col-12 col-lg-6 d-flex flex-column align-items-center justify-content-center  text-lg-start mb-5">
+                    <div class="d-flex align-items-center mb-3 justify-content-lg-start elementoContacto">
+                        <i class="fas fa-map-marker-alt me-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5>Ubicación</h5>
+                            <p>Av.Cafeteros C.Cafecito</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3 justify-content-lg-start elementoContacto">
+                        <i class="fas fa-phone me-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5>Teléfono</h5>
+                            <p>+123456789</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3 justify-content-lg-start elementoContacto">
+                        <i class="fas fa-envelope me-3"></i>
+                        <div class="d-flex flex-column">
+                            <h5>Correo Electrónico</h5>
+                            <p>cafecito@cafecito.com</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna del formulario -->
+                <div class="col col-12 col-lg-6">
+                    <h3 class="text-center text-brown">Escríbenos un mensaje al correo</h3>
+                    <form action="" class="d-flex flex-column">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" class="form-control mb-2" required placeholder="Ingresa tu nombre completo"
+                            id="nombre" name="nombre">
+                        <label for="correo">Correo Electrónico</label>
+                        <input type="email" class="form-control mb-2" required
+                            placeholder="Ingresa tu correo electrónico" id="correo" name="correo">
+                        <label for="comentario">Mensaje</label>
+                        <textarea class="form-control mb-3" id="comentario" name="comentario" rows="4"
+                            placeholder="Envíanos tu mensaje"></textarea>
+                        <button type="submit" class="btn align-self-center">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="mt-auto bg-dark text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="footer-about">
+                        <h5 class="text-uppercase fw-bold mb-4" style="letter-spacing: 1px;">No te quedes sin probar
+                            nuestro café</h5>
+                        <p class="mb-4" style="line-height: 1.8;">Si eres un amante del café tal como nosotros, ven y
+                            prueba nuestro cafecito. Te aseguramos que te encantará la experiencia de auténtico sabor.
+                        </p>
+                        <div class="d-flex align-items-center">
+                            <i class="fas fa-coffee me-3 fs-4 text-warning"></i>
+                            <span class="fw-light">Café 100% de calidad</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces rápidos -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4" style="letter-spacing: 1px;">Accesos rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <a href="#inicio"
+                                class="text-white text-decoration-none d-flex align-items-center hover-gold">
+                                <i class="fas fa-chevron-right me-2 small text-warning"></i> Inicio
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#nosotros"
+                                class="text-white text-decoration-none d-flex align-items-center hover-gold">
+                                <i class="fas fa-chevron-right me-2 small text-warning"></i> Nosotros
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#productos"
+                                class="text-white text-decoration-none d-flex align-items-center hover-gold">
+                                <i class="fas fa-chevron-right me-2 small text-warning"></i> Productos
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#contactos"
+                                class="text-white text-decoration-none d-flex align-items-center hover-gold">
+                                <i class="fas fa-chevron-right me-2 small text-warning"></i> Contactos
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Redes sociales -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h5 class="text-uppercase fw-bold mb-4" style="letter-spacing: 1px;">Síguenos</h5>
+                    <p class="mb-4">Conéctate con nosotros en redes sociales</p>
+                    <div class="social-icons">
+                        <a href="#"
+                            class="text-white me-3 bg-warning rounded-circle d-inline-flex align-items-center justify-content-center"
+                            style="width: 40px; height: 40px;">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="text-white me-3 bg-warning rounded-circle d-inline-flex align-items-center justify-content-center"
+                            style="width: 40px; height: 40px;">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#"
+                            class="text-white me-3 bg-warning rounded-circle d-inline-flex align-items-center justify-content-center"
+                            style="width: 40px; height: 40px;">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="text-white bg-warning rounded-circle d-inline-flex align-items-center justify-content-center"
+                            style="width: 40px; height: 40px;">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+
+                    <div class="mt-4">
+                        <h6 class="text-uppercase fw-bold mb-3">Suscríbete</h6>
+                        <div class="input-group mb-3">
+                            <input type="email" class="form-control" id="btnEnviar" placeholder="Tu correo" aria-label="Tu correo">
+                            <button class="btn btn-warning text-white" type="button">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="my-4 bg-light opacity-75">
+
+            <div class="row">
+                <div class="col-md-12 text-center pt-2">
+                    <p class="mb-0">&copy; 2025 <span class="text-warning">Rocel Gerl</span>. Todos los derechos
+                        reservados.</p>
+                    <p class="small mt-2 mb-0">Diseñado con <i class="fas fa-heart text-danger"></i> para amantes del
+                        café</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+    <script>
+        const productos = [
+            {
+                nombre: "Café Expreso",
+                precio: 12.00,
+                descripcion: "El café expreso es la base de todo café con cuerpo, ideal para aquellos que buscan una bebida intensa y de sabor robusto. Se prepara con granos finamente molidos y se extrae bajo alta presión, lo que da como resultado una taza pequeña pero concentrada. Esta bebida ofrece un sabor denso con una capa de crema que agrega suavidad y una experiencia rica en matices. Perfecto para empezar el día con energía o disfrutar de una pausa activa.",
+                imagen: "cafecito.jpg"
+            },
+            {
+                nombre: "Café Latte",
+                precio: 15.00,
+                descripcion: "El café latte es una mezcla suave y cremosa de café expreso y leche vaporizada, que crea una bebida reconfortante. Con una proporción de 1:3 entre el expreso y la leche, esta bebida es más suave que un expreso pero sigue teniendo la esencia del café. La leche vaporizada le da una textura sedosa y la espuma en la parte superior le da una sensación ligera. El latte es una opción ideal para quienes buscan un café suave pero con carácter.",
+                imagen: "cafecito.jpg"
+            },
+            {
+                nombre: "Café Capuchino",
+                precio: 16.00,
+                descripcion: "El capuchino es una bebida clásica italiana, preparada con una combinación de café expreso, leche vaporizada y espuma de leche. Su característica principal es la espuma de leche, que le da una textura espumosa y cremosa. Es una bebida equilibrada que ofrece un sabor suave con una capa de espuma densa que lo hace más ligero al paladar. Perfecto para aquellos que buscan algo entre un café negro y un café con leche.",
+                imagen: "cafecito.jpg"
+            },
+            {
+                nombre: "Café Mocha",
+                precio: 18.00,
+                descripcion: "El café mocha es una deliciosa combinación de café expreso, leche vaporizada y sirope de chocolate. Esta mezcla se cubre con crema batida y, en algunas variaciones, con una pizca de cacao en polvo. El mocha es ideal para los amantes del chocolate que también disfrutan del sabor intenso del café, creando una fusión perfecta entre ambos mundos. Es una opción reconfortante que puede ser disfrutada a cualquier hora del día, especialmente en días fríos.",
+                imagen: "cafecito.jpg"
+            },
+            {
+                nombre: "Café Americano",
+                precio: 14.00,
+                descripcion: "El café americano es una bebida simple y fuerte que se obtiene al diluir un café expreso con agua caliente. El resultado es una bebida con un sabor menos intenso que el expreso, pero con la misma esencia y profundidad. Ideal para aquellos que prefieren un café más ligero y menos cremoso, el americano es perfecto para los que disfrutan del café negro, sin aditivos.",
+                imagen: "cafecito.jpg"
+            },
+            {
+                nombre: "Café Cortado",
+                precio: 13.00,
+                descripcion: "El café cortado es una bebida que se compone de café expreso con una pequeña cantidad de leche vaporizada, lo que suaviza el sabor sin enmascarar el carácter del café. Con una proporción más equilibrada entre el café y la leche, el cortado tiene un sabor menos fuerte que el expreso pero más intenso que el latte. Es ideal para quienes disfrutan de un café con leche, pero no en exceso.",
+                imagen: "cafecito.jpg"
+            },
+            {
+                nombre: "Café Frappé",
+                precio: 17.00,
+                descripcion: "El café frappé es una bebida refrescante, ideal para los días calurosos. Se prepara con café, hielo, leche y azúcar, todo mezclado hasta obtener una consistencia cremosa y espumosa. La bebida tiene un toque dulce y fresco, que combina bien con el intenso sabor del café. Es perfecto para quienes prefieren un café frío, ligero y con un toque de dulzura.",
+                imagen: "cafecito.jpg"
+            },
+            {
+                nombre: "Café Irlandés",
+                precio: 20.00,
+                descripcion: "El café irlandés es una bebida alcohólica que combina café caliente con whisky irlandés y azúcar, y se cubre con crema batida en la parte superior. Es una opción perfecta para aquellos que disfrutan del sabor fuerte del café con un toque de calor y dulzura. Ideal para una noche fría, el café irlandés es una mezcla reconfortante y estimulante.",
+                imagen: "cafecito.jpg"
+            },
+            {
+                nombre: "Café Caramel Macchiato",
+                precio: 17.00,
+                descripcion: "El café caramel macchiato es una mezcla de café expreso, leche vaporizada y sirope de caramelo. La combinación de la suavidad de la leche y el sabor dulce del caramelo, junto con la intensidad del café expreso, crea una bebida deliciosa y reconfortante. Es una opción ideal para los amantes del café con un toque de dulzura.",
+                imagen: "cafecito.jpg"
+            },
+            {
+                nombre: "Café Frappuccino",
+                precio: 19.00,
+                descripcion: "El frappuccino es una bebida refrescante y cremosa a base de café, hielo y leche, a menudo complementada con sirope de chocolate o vainilla. Con su textura espesa y fría, es perfecto para disfrutar en climas cálidos o como una bebida indulgente durante cualquier época del año. Además, puede ser personalizado con diferentes sabores según el gusto del cliente.",
+                imagen: "cafecito.jpg"
+            }
+        ];
+
+        // Cargar productos
+        const container = document.getElementById("productosContainer");
+        productos.forEach(producto => {
+            const card = document.createElement("div");
+            card.className = "prod rounded-5";
+            card.innerHTML = `
+    <div class="imagenProducto">
+        <img src="${producto.imagen}" alt="producto" class="img-fluid mb-2 rounded-top-5"
+            style="max-height: 200px; width: 100%; object-fit: cover;">
+    </div>
+    <div class="descripcionProducto px-3">
+        <h5 class="text-center">${producto.nombre}</h5>
+        <span class="fs-6">$ ${producto.precio.toFixed(2)}</span>
+        <div class="scrollProd">
+            <p>${producto.descripcion}</p>
+        </div>
+        <div class="text-center">
+            <button type="button"
+                class="btn mb-3 border-2 border-dark rounded-3 px-3 py-1 position-relative bg-white text-brown botonProd">
+                <i class="fas fa-shopping-cart"></i>
+                Comprar
+            </button>
+        </div>
+    </div>`;
+            container.appendChild(card);
+        });
+
+        // Dark Mode System
+        document.addEventListener('DOMContentLoaded', function () {
+            const btnDark = document.getElementById("btnDark");
+            const body = document.body;
+
+            // Inicializar tema (siempre en claro)
+            function initTheme() {
+                body.classList.remove('oscuro');
+                body.classList.add('claro');
+                updateIcon('claro');
+            }
+
+            // Actualizar icono
+            function updateIcon(theme) {
+                btnDark.innerHTML = theme === 'oscuro'
+                    ? '<i class="fas fa-sun"></i>'
+                    : '<i class="fas fa-moon"></i>';
+            }
+
+            // Cambiar tema
+            function toggleTheme() {
+                if (body.classList.contains('oscuro')) {
+                    body.classList.replace('oscuro', 'claro');
+                    localStorage.setItem('theme', 'claro');
+                } else {
+                    body.classList.replace('claro', 'oscuro');
+                    localStorage.setItem('theme', 'oscuro');
+                }
+                updateIcon(body.classList.contains('oscuro') ? 'oscuro' : 'claro');
+            }
+
+            // Inicializar
+            initTheme();
+            btnDark.addEventListener('click', toggleTheme);
+        });
+    </script>
+</body>
+
+</html>
