@@ -3,6 +3,43 @@ html {
     /* Ajusta según altura navbar */
 }
 
+/* Variables CSS para temas */
+:root {
+    /* Tema claro (valores por defecto) */
+    --bg-color: #fff;
+    --text-color: #212529;
+    --primary-color: #8B5A2B;
+    --secondary-color: #fef6ec;
+    --border-color: #8B5A2B;
+    --card-bg: #fef6ec;
+    --nav-bg: #343a40;
+    --footer-bg: #343a40;
+    --scroll-thumb: #8B5A2B;
+    --form-bg: #fff;
+    --input-bg: #fef6ec;
+  }
+  
+  .oscuro {
+    /* Tema oscuro */
+    --bg-color: #1a1a1a;
+    --text-color: #e0e0e0;
+    --primary-color: #d4a373; /* Café más claro para contraste */
+    --secondary-color: #2d2d2d;
+    --border-color: #d4a373;
+    --card-bg: #2d2d2d;
+    --nav-bg: #121212;
+    --footer-bg: #121212;
+    --scroll-thumb: #d4a373;
+    --form-bg: #2d2d2d;
+    --input-bg: #3d3d3d;
+    
+    /* Imagen de fondo más oscura */
+    #inicio {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('cafecito.jpg');
+    }
+  }
+
+
 .scrollProd::-webkit-scrollbar {
     width: 15px;
 }
@@ -14,6 +51,15 @@ html {
     background-clip: content-box;
 }
 
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.4s ease;
+}
+
+.claro {
+  background-color: var(--bg-color);
+}
 
 
 #inicio {
@@ -33,45 +79,45 @@ span {
 
 
 .botonInicio {
-    border: 1px solid white;
-    color: white;
+    border: 1px solid var(--bg-color);
+    color: var(--bg-color);
     transition: 0.5s;
 }
 
 .botonInicio:hover {
-    background-color: white;
+    background-color: var(--bg-color);
     color: black;
 }
 
 .btn-outline-brown {
-    border-color: #8B5A2B;
-    color: #8B5A2B;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
 }
 
 .btn-outline-brown:hover {
-    background-color: #8B5A2B;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
 }
 
 .text-brown {
-    color: #8B5A2B;
+    color: var(--primary-color);
 }
 
 
 #nosotros {
-    background-color: #fef6ec;
+    background-color: var(--secondary-color);
     min-height: 660px;
 }
 
 .elementoNosotros i {
-    background-color: #8B5A2B;
+    background-color: var(--primary-color);
     width: 70px;
     height: 70px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--bg-color);
     transition: 0.8s;
 }
 
@@ -80,17 +126,17 @@ span {
 }
 
 .prod {
-    border: 1px solid #8B5A2B;
+    border: 1px solid var(--primary-color);
     width: 400px;
-    background-color: #fef6ec;
+    background-color: var(--secondary-color);
 }
 
 .scrollProd {
     height: 160px;
     margin-bottom: 10px;
     overflow-y: auto;
-    background-color: #fff;
-    border: 1px solid #8B5A2B;
+    background-color: var(--bg-color);
+    border: 1px solid var(--primary-color);
     border-radius: 10px;
     padding: 3px 10px;
 }
@@ -101,49 +147,49 @@ span {
 
 
 .botonProd:hover {
-    background-color: #8B5A2B !important;
-    color: white;
+    background-color: var(--primary-color) !important;
+    color: var(--bg-color);
 }
 
 #contactos {
-    background-color: #fef6ec;
+    background-color: var(--secondary-color);
 }
 
 .elementoContacto i {
-    background-color: #8B5A2B;
+    background-color: var(--primary-color);
     width: 60px;
     height: 60px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: var(--bg-color);
     transition: 0.8s;
 }
 
 form {
-    border: 1px solid #8B5A2B;
+    border: 1px solid var(--primary-color);
     padding: 10px;
-    background-color: #fff;
+    background-color: var(--bg-color);
     border-radius: 10px;
 }
 
 form input,
 form textarea {
-    background-color: #fef6ec !important;
+    background-color: var(--secondary-color) !important;
     font-weight: bold;
 }
 
 form .btn {
-    background-color: #8B5A2B;
-    color: #fff;
-    border: 1px solid #8B5A2B;
+    background-color: var(--primary-color);
+    color: var(--bg-color);
+    border: 1px solid var(--primary-color);
 }
 
 form .btn:hover {
-    background-color: #fef6ec;
-    color: #8B5A2B;
-    border: 1px solid #8B5A2B;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 .elementoContacto {
@@ -151,8 +197,8 @@ form .btn:hover {
 }
 
 footer {
-    background-color: #343a40;
-    color: #fff;
+    background-color: var(--footer-bg);
+    color: var(--bg-color);
     padding: 3rem 0;
 }
 
@@ -162,11 +208,12 @@ footer {
 }
 
 .social-icons a:hover {
-    background-color: #b3875e !important;
+    background-color: var(--cafe-color) !important;
     transform: translateY(-3px);
 }
 
 .bg-warning, .btn-warning{
-    background-color: #8B5A2B !important;
-    border: 3px solid #8B5A2B ;
+    background-color: var(--primary-color) !important;
+    border: 3px solid var(--primary-color) ;
 }
+
